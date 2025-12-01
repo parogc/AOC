@@ -60,13 +60,31 @@ Analyze the rotations in your attached document. What's the actual password to o
 
 
 class p12025 {
-   static func parseTextIntoArrays(input: String) -> [String] {
+    enum direction {
+        case left
+        case right
+    }
+    
+    struct instructionSet {
+        var number: Int
+        var rotation: direction
+    }
+    
+   static func parseTextIntoArrays(input: String) -> [instructionSet] {
         let lines = input.split(separator: "\n") // Split the text into lines
-        var array: [String] = []
+        var array: [instructionSet] = []
        
         
         for line in lines {
-            array.append(String(line))
+            var iS = instructionSet(number: 0, rotation: .left)
+            if line.first == "R" {
+                iS.rotation = .right
+            } else if line.first == "L" {
+                iS.rotation = .left
+            }
+            
+            iS.number = Int(line.dropFirst()) ?? 0
+            array.append(iS)
               
         }
         return array
@@ -76,7 +94,26 @@ class p12025 {
     
     static func problem1part1(){
         let array = parseTextIntoArrays(input: input)
-        print(array)
+        var value = 50
+        var mod = 100
+        var zeros = 0
+        
+        for instruction in array {
+            switch instruction.rotation {
+            case .left:
+                value -= instruction.number
+            case .right:
+                value += instruction.number
+            }
+            
+            if ((value % mod) + mod) % mod == 0 {
+                zeros += 1
+            }
+        }
+        
+        print(zeros)
+        
+        
     }
     
     
@@ -91,6 +128,6 @@ class p12025 {
                             L1
                             L99
                             R14
-                            L82 
+                            L82
                             """
 }
