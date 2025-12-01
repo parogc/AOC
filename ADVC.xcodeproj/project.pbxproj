@@ -28,6 +28,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		A7EDBF262EDDFC2F009484B4 /* 2025 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = 2025;
+			sourceTree = "<group>";
+		};
 		A7F4D9522CFE15D900674012 /* 2024 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = 2024;
@@ -46,17 +51,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A7EDBF252EDDFB91009484B4 /* 2025 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = 2025;
-			sourceTree = "<group>";
-		};
 		A7F4D9472CFE15D800674012 = {
 			isa = PBXGroup;
 			children = (
-				A7EDBF252EDDFB91009484B4 /* 2025 */,
+				A7EDBF262EDDFC2F009484B4 /* 2025 */,
 				A7EDBF1E2EDDFB18009484B4 /* main.swift */,
 				A7F4D9522CFE15D900674012 /* 2024 */,
 				A7F4D9512CFE15D900674012 /* Products */,
@@ -87,6 +85,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				A7EDBF262EDDFC2F009484B4 /* 2025 */,
 				A7F4D9522CFE15D900674012 /* 2024 */,
 			);
 			name = ADVC;

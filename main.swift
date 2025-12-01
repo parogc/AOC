@@ -43,6 +43,6 @@ p5.problem1()
 print("\n")
  */
 
-print("p5.problem1part2")
-p5.problem1part2()
+print("p12025.problem1part1")
+p12025.problem1part1()
 print("\n")
